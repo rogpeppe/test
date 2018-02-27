@@ -3,7 +3,7 @@ package bar2
 import (
 	"fmt"
 
-	_ "github.com/rogpeppe/test/foo/v2/bar1"
+	_ "github.com/rogpeppe/test/v2/foo/bar1"
 )
 
 func init() {
