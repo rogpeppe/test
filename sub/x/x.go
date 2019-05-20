@@ -1,3 +1,7 @@
 package x
 
-const X = 1
+import (
+	"github.com/rogpeppe/test/sub/y"
+)
+
+const X = y.Y
