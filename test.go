@@ -1,5 +1,5 @@
 package test
 
 func Test() string {
-	return "test v1.0.0"
+	return "test v1.1.0"
 }
