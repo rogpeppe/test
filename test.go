@@ -1,5 +1,11 @@
-package test
+package main
 
-func Test() string {
-	return "test v1.1.0"
+import (
+	"fmt"
+
+	_ "github.com/frankban/quicktest"
+)
+
+func main() {
+	fmt.Println("hello")
 }
