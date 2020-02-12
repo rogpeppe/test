@@ -35,11 +35,26 @@ jobs:
       timeout-minutes: 1
     - name: Test
       run: |
-        nc -v -z localhost 9092
+        while nc -v -z localhost 9092; do
+           echo ok so far
+           sleep 0.5
+        done
+        echo failed!
+        echo ------------- kafka logs
+        docker logs "${{ job.services.kafka.id }}"
+        echo ---------------
+        exit 1
         export KAFKA_ADDRS=localhost:9092
         #go test ./...
+        sleep 13
+        echo trying again
+        nc -v -z localhost 9092
         go run dial.go $KAFKA_ADDRS
-        go test -mod=vendor ./...
+        if ! go test ./...; then
+          echo tests failed
+          go run dial.go $KAFKA_ADDRS
+          exit 1
+        fi
     strategy:
       matrix:
         go-version:
