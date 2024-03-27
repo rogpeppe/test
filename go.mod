@@ -1,3 +1,3 @@
 module github.com/rogpeppe/test
 
-go 1.23
+go 1.21
