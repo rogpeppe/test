@@ -1,13 +1,17 @@
-package test
+//go:build never
+
+package main
 
 import (
-	"embed"
+	"fmt"
 	"io/fs"
+
+	"github.com/rogpeppe/test"
 )
 
-//go:embed all:somedir
-var f embed.FS
-
-func FS() fs.FS {
-	return f
+func main() {
+	fs.WalkDir(test.FS(), ".", func(path string, d fs.DirEntry, err error) error {
+		fmt.Println(path)
+		return nil
+	})
 }
