@@ -1,0 +1,23 @@
+# .github/workflows/placeholder-success.yml
+name: Always Succeed CI
+
+on:
+  push:
+    branches:
+      - '**'  # Match all branches
+
+jobs:
+  always-pass:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run placeholder script
+        run: |
+          echo "This is a placeholder script."
+          echo "Modify this block to do real work."
+
+      - name: Force success
+        if: always()
+        run: echo "Marking job as succeeded, regardless of earlier failures."
