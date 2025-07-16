@@ -3,8 +3,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout code
-              shell: bash
               uses: actions/checkout@v4
+              working-directory: /
             - name: Run placeholder script
               run: |
                 echo "This is a placeholder script."
