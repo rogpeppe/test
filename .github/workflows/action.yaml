@@ -3,7 +3,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout code
-              run: "true"
+              shell: bash
               uses: actions/checkout@v4
             - name: Run placeholder script
               run: |
