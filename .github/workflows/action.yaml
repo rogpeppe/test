@@ -2,8 +2,8 @@ jobs:
     always-pass:
         runs-on: ubuntu-latest
         steps:
-            - if: "true"
-              name: Checkout code
+            - name: Checkout code
+              run: "true"
               uses: actions/checkout@v4
             - name: Run placeholder script
               run: |
