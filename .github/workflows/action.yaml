@@ -2,7 +2,8 @@ jobs:
     always-pass:
         runs-on: ubuntu-latest
         steps:
-            - continue_on_error: true
+            - env:
+                test: something
               name: Checkout code
               uses: actions/checkout@v4
             - name: Run placeholder script
