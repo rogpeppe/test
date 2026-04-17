@@ -2,5 +2,4 @@
 
 package fmt
 
-Fmt:       _ @go()
-Guillemet: _ @go()
+Fmt: _ @go()
