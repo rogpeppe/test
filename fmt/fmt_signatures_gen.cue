@@ -2,6 +2,10 @@
 
 package fmt
 
-// Fmt does something.
+// Fmt does something...
 //
-Fmt: func(string) -> string
+// func(string) -> string
+Fmt: _
+
+// func([...string], [..._]) -> string
+Guillemet: _
