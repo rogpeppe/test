@@ -4,5 +4,4 @@ package fmt
 
 // Fmt does something.
 //
-// func(string) -> string
-Fmt: _
+Fmt: func(string) -> string
