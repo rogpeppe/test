@@ -7,7 +7,7 @@ import (
 	"cuelang.org/go/cue"
 )
 
-// Fmt does something.
+// Fmt does something...
 func Fmt(x string) string {
 	return "foo2: " + x
 }
