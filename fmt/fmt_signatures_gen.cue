@@ -9,3 +9,22 @@ Fmt: _
 
 // func([...string], [..._]) -> string
 Guillemet: _
+
+// ToSnakeCase can convert all upper case characters in a string to
+// snake case format.
+//
+// Some samples.
+//
+// 	"FirstName"    => "first_name"
+// 	"HTTPServer"   => "http_server"
+// 	"NoHTTPS"      => "no_https"
+// 	"GO_PATH"      => "go_path"
+// 	"GO PATH"      => "go_path"  // space is converted to underscore.
+// 	"GO-PATH"      => "go_path"  // hyphen is converted to underscore.
+// 	"http2xx"      => "http_2xx" // insert an underscore before a number and after an alphabet.
+// 	"HTTP20xOK"    => "http_20x_ok"
+// 	"Duration2m3s" => "duration_2m3s"
+// 	"Bld4Floor3rd" => "bld4_floor_3rd"
+//
+// func(string) -> string
+ToUpper: _
