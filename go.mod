@@ -4,6 +4,7 @@ go 1.26
 
 require (
 	cuelang.org/go v0.16.1
+	github.com/google/jsonschema-go v0.4.3
 	github.com/huandu/xstrings v1.5.0
 )
 
