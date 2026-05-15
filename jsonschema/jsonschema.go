@@ -23,7 +23,7 @@ func Validator(schemav cue.Value) (cue.Value, error) {
 			return err
 		}
 		var x any
-		if err := json.Unmarshal(data, x); err != nil {
+		if err := json.Unmarshal(data, &x); err != nil {
 			return err
 		}
 		return resolved.Validate(x)
